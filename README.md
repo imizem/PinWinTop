@@ -13,7 +13,7 @@ Built with Swift and AppKit, PinWinTop uses macOS Accessibility APIs to track an
 
 ## Installation
 
-1. Go to the [Releases](https://github.com/OWNER/REPO/releases) page for this repository. (Note: Ensure you download the pre-compiled binary).
+1. Go to the [Releases](https://github.com/imizem/PinWinTop/releases) page for this repository. (Note: Ensure you download the pre-compiled binary).
 2. Download the latest `PinWinTop.app.zip`.
 3. Double-click the downloaded `.zip` file to extract the `PinWinTop.app`.
 4. Drag and drop `PinWinTop.app` into your `/Applications` folder.
@@ -41,7 +41,7 @@ Once running, PinWinTop lives in your menubar as a simple 📌 icon.
 If you'd like to build the project yourself using Swift Package Manager:
 
 ```bash
-git clone https://github.com/OWNER/REPO.git
+git clone https://github.com/imizem/PinWinTop.git
 cd PinWinTop
 swift build -c release
 ```
