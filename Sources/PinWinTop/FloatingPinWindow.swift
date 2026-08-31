@@ -17,6 +17,7 @@ class FloatingPinWindow: NSWindow {
 
         self.level = .floating // Stay on top
         self.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
+        self.collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary]
         self.backgroundColor = .clear
         self.isOpaque = false
         self.hasShadow = false
