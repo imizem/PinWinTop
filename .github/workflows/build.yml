@@ -11,7 +11,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
 
     - name: Build binary
       run: swift build -c release
@@ -56,7 +56,7 @@ jobs:
         zip -r PinWinTop.app.zip PinWinTop.app
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: PinWinTop-App
         path: PinWinTop.app.zip
