@@ -13,11 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Swift
-      uses: swift-actions/setup-swift@v1
-      with:
-        swift-version: "5.8"
-
     - name: Build binary
       run: swift build -c release
 
@@ -25,7 +20,10 @@ jobs:
       run: |
         mkdir -p PinWinTop.app/Contents/MacOS
         mkdir -p PinWinTop.app/Contents/Resources
-        cp .build/release/PinWinTop PinWinTop.app/Contents/MacOS/
+
+        # Get the actual binary path which varies by architecture (x86_64 vs arm64)
+        BIN_PATH=$(swift build -c release --show-bin-path)
+        cp "$BIN_PATH/PinWinTop" PinWinTop.app/Contents/MacOS/
 
         # Create Info.plist
         cat << 'PLIST' > PinWinTop.app/Contents/Info.plist
